@@ -84,6 +84,13 @@ purchaseCancelHandler =()=> {
     })
 }
 
+purchaseContinueHandler = ()=> {
+    // this.setState({
+    //     purchasing: true
+    // })
+    alert('You can continue!!')
+}
+
     render(){
         // console.log(this.state.ingredients)
         const disabledInfo ={
@@ -97,7 +104,10 @@ purchaseCancelHandler =()=> {
                     <Modal show = {this.state.purchasing}
                            modalClosed = {this.purchaseCancelHandler}
                            >
-                        <OrderSummary ingredients = {this.state.ingredients}/>
+                        <OrderSummary ingredients = {this.state.ingredients}
+                                      purchaseContinued = {this.purchaseContinueHandler}
+                                      purchaseCancelled = {this.purchaseCancelHandler}
+                                      finalPrice = {this.state.totalPrice}/>
                     </Modal>
                     <Burger ingredient = {this.state.ingredients}/>
                     {/* <div>Build controls</div> */}

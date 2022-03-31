@@ -1,7 +1,8 @@
 import React from 'react'
 import BurgerIngredients from './BurgerIngredients/BurgerIngredients';
-import classes from './Burger.css'
+import classes from './Burger.css';
 // import BurgerBuilder from '../../containers/BurgerBuilder/BurgerBuilder';
+
 const Burger = (props) => {
     let transformedIngredient = Object.keys(props.ingredient)
         .map(igKey => {
